@@ -5,3 +5,5 @@ Console.WriteLine("Hello, C#!");
 //NAMESPACES
 string name = typeof(Program).Namespace ?? "None!";
 Console.WriteLine($"Namespace: {name}");
+
+int z;
