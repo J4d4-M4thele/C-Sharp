@@ -83,3 +83,87 @@ unsafe
     Console.WriteLine($"Int128 uses {sizeof(Int128)} bytes and can store numbers in the range {Int128.MinValue:N0} to {Int128.MaxValue:N0}.");
 }
 #endregion
+
+#region Booleans
+bool happy = true;
+bool sad = false;
+#endregion
+
+#region Objects
+object height = 1.6; // Storing a double in an object.
+object name = "Jada"; // Storing a string in an object.
+Console.WriteLine($"{name} is {height} metres tall.");
+//int length1 = name.Length; // This gives a compile error!
+int length2 = ((string)name).Length; // Cast name to a string.
+Console.WriteLine($"{name} has {length2} characters.");
+#endregion
+
+#region Dynamic Types
+//stores any type of data
+
+dynamic something;
+
+something = new[] { 3, 5, 7, 9 };
+something = 12;
+something = "Tyeishia";
+
+Console.WriteLine($"The length of something is {something.Length}");
+Console.WriteLine($"something is a {something.GetType()}");
+#endregion
+
+#region Local Variables
+int population = 67_000_000; // 67 million in UK.
+double weight = 1.88; // in kilograms.
+decimal price = 4.99M; // in pounds sterling.
+string fruit = "Apples"; // string values use double-quotes.
+char letter = 'Z'; // char values use single-quotes.
+bool tired = true; // Booleans can only be true or false.
+
+/*
+var population = 67_000_000; // 67 million in UK.
+var weight = 1.88; // in kilograms.
+var price = 4.99M; // in pounds sterling.
+var fruit = "Apples"; // string values use double-quotes.
+var letter = 'Z'; // char values use single-quotes.
+var tired = true; // Booleans can only be true or false.
+*/
+#endregion
+
+#region Instantiating Objects
+Person kim = new();
+kim.BirthDate = new(1990, 12, 14);
+
+List<Person> people = new() {
+    new() { FirstName = "Alice"},
+    new() { FirstName = "Barbara"},
+    new() { FirstName = "Charlie"}
+
+};
+
+class Person {
+    public string FirstName;
+    public DateTime BirthDate;
+}
+#endregion
+
+#region Getting and Setting Values
+/*
+Console.WriteLine($"default(int) = {default(int)}");
+Console.WriteLine($"default(bool) = {default(bool)}");
+Console.WriteLine($"default(DateTime) = {default(DateTime)}");
+Console.WriteLine($"default(string) = {default(string)}");
+
+int number = 13;
+Console.WriteLine($"number set to: {number}");
+number = default;
+Console.WriteLine($"number reset to its default: {number}");
+*/
+#endregion
+
+#region Displaying Output
+/*
+Console.WriteLine("A");
+Console.WriteLine("B");
+Console.WriteLine("C");
+*/
+#endregion
