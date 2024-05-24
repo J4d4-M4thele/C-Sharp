@@ -1,58 +1,35 @@
-﻿//SBYTE
-using System;
+﻿string rowSeparator = new string('-', count: 104);
+WriteLine(rowSeparator);
+WriteLine($"Type     {"Byte(s) of memory",-4} {"Min",32} {"Max",45}");
 
-Console.WriteLine("{0} {1} {2} {3}",
-arg0: "sbyte", arg1: "sbyte", arg2: sbyte.MinValue, arg3: sbyte.MaxValue);
-
+//SBYTE
+WriteLine($"sbyte {sizeof(sbyte),-4} {sbyte.MinValue,45} {sbyte.MaxValue,45}");
 //BYTE
-Console.WriteLine("{0} {1} {2} {3}",
-arg0: "byte", arg1: "byte", arg2: byte.MinValue, arg3: byte.MaxValue);
-
+WriteLine($"byte {sizeof(byte),-4} {byte.MinValue,45} {byte.MaxValue,45}");
 //SHORT
-Console.WriteLine("{0} {1} {2} {3}",
-arg0: "short", arg1: "short", arg2: short.MinValue, arg3: short.MaxValue);
-
+WriteLine($"short {sizeof(short),-4} {short.MinValue,45} {short.MaxValue,45}");
 //USHORT
-Console.WriteLine("{0} {1} {2} {3}",
-arg0: "ushort", arg1: "ushort", arg2: ushort.MinValue, arg3: ushort.MaxValue);
-
+WriteLine($"ushort {sizeof(ushort),-4} {ushort.MinValue,45} {ushort.MaxValue,45}");
 //INT
-Console.WriteLine("{0} {1} {2} {3}",
-arg0: "int", arg1: "int", arg2: int.MinValue, arg3: int.MaxValue);
-
+WriteLine($"int {sizeof(int),-4} {int.MinValue,45} {int.MaxValue,45}");
 //UINT
-Console.WriteLine("{0} {1} {2} {3}",
-arg0: "uint", arg1: "uint", arg2: uint.MinValue, arg3: uint.MaxValue);
-
+WriteLine($"uint {sizeof(uint),-4} {uint.MinValue,45} {uint.MaxValue,45}");
 //LONG
-Console.WriteLine("{0} {1} {2} {3}",
-arg0: "long", arg1: "long", arg2: long.MinValue, arg3: long.MaxValue);
-
+WriteLine($"long {sizeof(long),-4} {long.MinValue,45} {long.MaxValue,45}");
 //ULONG
-Console.WriteLine("{0} {1} {2} {3}",
-arg0: "ulong", arg1: "ulong", arg2: ulong.MinValue, arg3: ulong.MaxValue);
-
-//INT128
-Console.WriteLine("{0} {1} {2} {3}",
-arg0: "Int128", arg1: "Int128", arg2: Int128.MinValue, arg3: Int128.MaxValue);
-
-//UINT128
-Console.WriteLine("{0} {1} {2} {3}",
-arg0: "UInt128", arg1: "UInt128", arg2: UInt128.MinValue, arg3: UInt128.MaxValue);
-
-//HALF
-Console.WriteLine("{0} {1} {2} {3}",
-arg0: "Half", arg1: "Half", arg2: Half.MinValue, arg3: Half.MaxValue);
-
+WriteLine($"ulong {sizeof(ulong),-4} {ulong.MinValue,45} {ulong.MaxValue,45}");
+unsafe { 
+    //INT128
+    WriteLine($"Int128 {sizeof(Int128),-4} {Int128.MinValue,45} {Int128.MaxValue,45}");
+    //UINT128
+    WriteLine($"UInt128 {sizeof(UInt128),-4} {UInt128.MinValue,45} {UInt128.MaxValue,45}");
+    //HALF
+    WriteLine($"Half {sizeof(Half),-4} {Half.MinValue,45} {Half.MaxValue,45}");
+}
 //FLOAT
-Console.WriteLine("{0} {1} {2} {3}",
-arg0: "float", arg1: "float", arg2: float.MinValue, arg3: float.MaxValue);
-
+WriteLine($"float {sizeof(float),-4} {float.MinValue,45} {float.MaxValue,45}");
 //DOUBLE
-Console.WriteLine("{0} {1} {2} {3}",
-arg0: "double", arg1: "double", arg2: double.MinValue, arg3: double.MaxValue);
-
+WriteLine($"double {sizeof(double),-4} {double.MinValue,45} {double.MaxValue,45}");
 //DECIMAL
-Console.WriteLine("{0} {1} {2} {3}",
-arg0: "decimal", arg1: "decimal", arg2: decimal.MinValue, arg3: decimal.MaxValue);
+WriteLine($"decimal {sizeof(decimal),-4} {decimal.MinValue,45} {decimal.MaxValue,45}");
 
