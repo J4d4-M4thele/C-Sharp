@@ -15,6 +15,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CastingConverting", "Castin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HandlingExceptions", "HandlingExceptions\HandlingExceptions.csproj", "{205BAF0C-71AA-488A-85DF-CE1262B1E28A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch03Ex02LoopsAndOverflow", "Ch03Ex02LoopsAndOverflow\Ch03Ex02LoopsAndOverflow.csproj", "{780DC028-D29F-402B-88BE-4AA23CA13DDA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch03Ex03Operators", "Ch03Ex03Operators\Ch03Ex03Operators.csproj", "{52072661-4360-4EC6-B39E-91F4675C556A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch03Ex04FizzBuzz", "Ch03Ex04FizzBuzz\Ch03Ex04FizzBuzz.csproj", "{D0C750A3-A25A-4DF8-B0A4-02C88F7CCE8D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +51,18 @@ Global
 		{205BAF0C-71AA-488A-85DF-CE1262B1E28A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{205BAF0C-71AA-488A-85DF-CE1262B1E28A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{205BAF0C-71AA-488A-85DF-CE1262B1E28A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{780DC028-D29F-402B-88BE-4AA23CA13DDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{780DC028-D29F-402B-88BE-4AA23CA13DDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{780DC028-D29F-402B-88BE-4AA23CA13DDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{780DC028-D29F-402B-88BE-4AA23CA13DDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52072661-4360-4EC6-B39E-91F4675C556A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52072661-4360-4EC6-B39E-91F4675C556A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52072661-4360-4EC6-B39E-91F4675C556A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52072661-4360-4EC6-B39E-91F4675C556A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0C750A3-A25A-4DF8-B0A4-02C88F7CCE8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0C750A3-A25A-4DF8-B0A4-02C88F7CCE8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0C750A3-A25A-4DF8-B0A4-02C88F7CCE8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0C750A3-A25A-4DF8-B0A4-02C88F7CCE8D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
