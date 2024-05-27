@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch03Ex03Operators", "Ch03Ex
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch03Ex04FizzBuzz", "Ch03Ex04FizzBuzz\Ch03Ex04FizzBuzz.csproj", "{D0C750A3-A25A-4DF8-B0A4-02C88F7CCE8D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch03Ex05Exceptions", "Ch03Ex05Exceptions\Ch03Ex05Exceptions.csproj", "{42F5BD6A-1377-447E-B2E7-4557AFAF5770}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{D0C750A3-A25A-4DF8-B0A4-02C88F7CCE8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D0C750A3-A25A-4DF8-B0A4-02C88F7CCE8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D0C750A3-A25A-4DF8-B0A4-02C88F7CCE8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42F5BD6A-1377-447E-B2E7-4557AFAF5770}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42F5BD6A-1377-447E-B2E7-4557AFAF5770}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42F5BD6A-1377-447E-B2E7-4557AFAF5770}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42F5BD6A-1377-447E-B2E7-4557AFAF5770}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
