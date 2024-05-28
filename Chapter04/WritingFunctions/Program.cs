@@ -20,8 +20,9 @@ RunFactorial();
 #endregion
 
 
-#region Cardinal to Ordinal
-
+#region Fibbonacci Numbers
+RunFibImperative();
+RunFibFunctional();
 #endregion
 
 #region Cardinal to Ordinal

@@ -3,6 +3,7 @@ using System.Globalization;
 
 partial class Program
 {
+    //TIMES TABLES
     static void TimesTable(byte num, byte size = 12)
     {
         WriteLine($"This is the {num} times tables with {size} rows: ");
@@ -15,6 +16,7 @@ partial class Program
         WriteLine();
     }
 
+    //CALCULATE TAX
     static decimal CalculateTax(decimal amount, string regionalCode)
     {
         decimal rate = regionalCode switch
@@ -31,6 +33,7 @@ partial class Program
         return amount * rate;
     }
 
+    //CONFIGURE CONSOLE
     static void ConfigureConsole(string culture = "en-US", bool useComputerCulture = false)
     {
         // To enable Unicode characters like Euro symbol in the console.
@@ -42,6 +45,7 @@ partial class Program
         WriteLine($"CurrentCulture: {CultureInfo.CurrentCulture.DisplayName}");
     }
 
+    //CARDINAL TO ORDINAL
     static string CardinalToOrdinal(uint num)
     {
         uint lastTwoDigits = num % 100;
@@ -76,6 +80,7 @@ partial class Program
         }
     }
 
+    //FACTORIAL
     static int Factorial(int number)
     {
         if (number < 0)
@@ -111,8 +116,57 @@ partial class Program
             }
             catch (Exception e)
             {
-                WriteLine($"{i}! throws {ex.GetType()}: {ex.Message}");
+                WriteLine($"{i}! throws {e.GetType()}: {e.Message}");
             }
+        }
+    }
+
+    //FIBBONACCI NUMBERS
+    static int FibImperative(uint term)
+    {
+        if(term == 0)
+        {
+            throw new ArgumentOutOfRangeException();
+        }
+        else if (term == 1)
+        {
+            return 0; 
+        }
+        else if (term == 2)
+        {
+            return 1;
+        }
+        else
+        {
+            return FibImperative(term - 1) + FibImperative(term - 2);
+        }
+    }
+
+    static void RunFibImperative()
+    {
+        for (uint i = 1; i <= 30; i++)
+        {
+            WriteLine("The {0} term of the Fibonacci sequence is {1:N0}.",
+            arg0: CardinalToOrdinal(i),
+            arg1: FibImperative(term: i));
+        }
+    }
+
+    static int FibFunctional(uint term) => term switch
+    {
+        0 => throw new ArgumentOutOfRangeException(),
+        1 => 0,
+        2 => 1,
+        _ => FibFunctional(term - 1) + FibFunctional(term - 2)
+    };
+
+    static void RunFibFunctional()
+    {
+        for (uint i = 1; i <= 30; i++)
+        {
+            WriteLine("The {0} term of the Fibonacci sequence is {1:N0}.",
+            arg0: CardinalToOrdinal(i),
+            arg1: FibFunctional(term: i));
         }
     }
 }
