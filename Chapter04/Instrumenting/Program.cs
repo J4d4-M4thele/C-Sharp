@@ -27,8 +27,12 @@ Debug.Close();
 Trace.Close();
 #endregion
 
-#region Trace Listiners
-
+#region Using external Functions
+int unitsInStock = 12;
+LogSourceDetails(unitsInStock > 10);
+// Close the text file (also flushes) and release resources.
+Debug.Close();
+Trace.Close();
 #endregion
 
 #region Trace Listiners
