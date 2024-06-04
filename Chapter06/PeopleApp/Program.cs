@@ -12,12 +12,18 @@ harry.WriteToConsole();
 #endregion
 
 #region Implementing Methods
+/*
 Person lamech = new() { Name = "Lamech" };
 Person adah = new() { Name = "Adah" };
 Person zillah = new() { Name = "Zillah" };
 
 lamech.Marry(adah);
 Person.Marry(lamech, zillah);
+
+if (lamech + zillah)
+{
+    WriteLine($"{lamech.Name} and {zillah.Name} successfully got married.");
+}
 
 lamech.OutputSpouses();
 adah.OutputSpouses();
@@ -30,6 +36,12 @@ WriteLine($"{baby1.Name} was born on {baby1.Born}");
 Person baby2 = Person.Procreate(zillah, lamech);
 baby2.Name = "Tubalcain";
 
+Person baby3 = lamech * adah;
+baby3.Name = "Jubal";
+
+Person baby4 = zillah * lamech;
+baby4.Name = "Naamah";
+
 adah.WriteChildrenToConsole();
 zillah.WriteChildrenToConsole();
 lamech.WriteChildrenToConsole();
@@ -41,4 +53,42 @@ for (int i = 0; i < lamech.Children.Count; i++)
     arg1: i + 1,
     arg2: lamech.Children[i].Name);
 }
+*/
+#endregion
+
+#region Non-Generic Types
+System.Collections.Hashtable lookupObject = new();
+lookupObject.Add(key: 1, value: "Alpha");
+lookupObject.Add(key: 2, value: "Beta");
+lookupObject.Add(key: 3, value: "Gamma");
+lookupObject.Add(key: harry, value: "Delta");
+
+int key = 2; // Look up the value that has 2 as its key.
+WriteLine(format: "Key {0} has value: {1}",
+arg0: key,
+arg1: lookupObject[key]);
+
+WriteLine(format: "Key {0} has value: {1}",
+arg0: harry,
+arg1: lookupObject[harry]);
+#endregion
+
+#region Operators
+
+#endregion
+
+#region Operators
+
+#endregion
+
+#region Operators
+
+#endregion
+
+#region Operators
+
+#endregion
+
+#region Operators
+
 #endregion
