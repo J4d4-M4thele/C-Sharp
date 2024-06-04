@@ -26,4 +26,19 @@ zillah.OutputSpouses();
 Person baby1 = lamech.ProcreateWith(adah);
 baby1.Name = "Jabal";
 WriteLine($"{baby1.Name} was born on {baby1.Born}");
+
+Person baby2 = Person.Procreate(zillah, lamech);
+baby2.Name = "Tubalcain";
+
+adah.WriteChildrenToConsole();
+zillah.WriteChildrenToConsole();
+lamech.WriteChildrenToConsole();
+
+for (int i = 0; i < lamech.Children.Count; i++)
+{
+    WriteLine(format: " {0}'s child #{1} is named \"{2}\".",
+    arg0: lamech.Name, 
+    arg1: i + 1,
+    arg2: lamech.Children[i].Name);
+}
 #endregion
