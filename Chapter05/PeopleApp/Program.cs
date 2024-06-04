@@ -292,21 +292,51 @@ foreach (Passenger passenger in passengers)
 #endregion
 
 #region Record Example
-//gives error: 
-//can only be assigned in an object initializer, or on 'this'
-//or 'base' in an instance constructor or an 'init' accessor
-/*
 ImmutablePerson jeff = new()
 { 
     FirstName = "Jeff",
     LastName = "Winger"
 };
-jeff.FirstName = "Geoff";
-*/
+//gives error: 
+//can only be assigned in an object initializer, or on 'this'
+//or 'base' in an instance constructor or an 'init' accessor
+//jeff.FirstName = "Geoff";
+
+ImmutableVehicle car = new()
+{
+    Brand = "Lambourgini Urus",
+    Color = "Matte Black",
+    Wheels = 4
+};
+ImmutableVehicle repaintedCar = car
+    //with allows us to change a property
+with
+{ Color = "Polymetal Grey Metallic" };
+WriteLine($"Original car color was {car.Color}.");
+WriteLine($"New car color is {repaintedCar.Color}.");
+
+ImmutableAnimal milo = new("Milo", "Pekingese");
+var (who, what) = milo;
+WriteLine($"{who} is a {what}.");
+
+Headset vp = new("Apple", "Vision Pro");
+WriteLine($"{vp.ProductName} is made by {vp.Manufacturer}.");
+
+Headset holo = new();
+WriteLine($"{holo.ProductName} is made by {holo.Manufacturer}.");
+Headset mq = new() { Manufacturer = "Meta", ProductName = "Quest 3" };
+WriteLine($"{mq.ProductName} is made by {mq.Manufacturer}.");
 #endregion
 
-#region Flight Patterns Example
-
+#region Equality of Record Types
+//two different objects w/ different address
+AnimalClass ac1 = new() { Name = "Rex" };
+AnimalClass ac2 = new() { Name = "Rex" };
+WriteLine($"ac1 == ac2: {ac1 == ac2}");
+//return true
+AnimalRecord ar1 = new() { Name = "Rex" };
+AnimalRecord ar2 = new() { Name = "Rex" };
+WriteLine($"ar1 == ar2: {ar1 == ar2}");
 #endregion
 
 #region Flight Patterns Example
