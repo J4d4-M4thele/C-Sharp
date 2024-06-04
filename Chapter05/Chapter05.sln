@@ -3,11 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.34916.146
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PacktLibraryNetStandard2", "PacktLibraryNetStandard2\PacktLibraryNetStandard2.csproj", "{0F743334-0266-47CB-89AB-DAA5AD870324}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PacktLibraryNetStandard2", "PacktLibraryNetStandard2\PacktLibraryNetStandard2.csproj", "{0F743334-0266-47CB-89AB-DAA5AD870324}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeopleApp", "PeopleApp\PeopleApp.csproj", "{6F2D984F-35D2-48F6-A198-61A402840397}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PeopleApp", "PeopleApp\PeopleApp.csproj", "{6F2D984F-35D2-48F6-A198-61A402840397}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PacktLibraryModern", "PacktLibraryModern\PacktLibraryModern.csproj", "{3B95E1BE-3339-43FD-AED6-EC0EF3C8AF2E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PacktLibraryModern", "PacktLibraryModern\PacktLibraryModern.csproj", "{3B95E1BE-3339-43FD-AED6-EC0EF3C8AF2E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch05Ex02AccessModifierLib", "Ch05Ex02AccessModifierLib\Ch05Ex02AccessModifierLib.csproj", "{BCEBD335-D0C5-4AF8-87F7-42117A10B82E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch05Ex02AccessModifierApp", "Ch05Ex02AccessModifierApp\Ch05Ex02AccessModifierApp.csproj", "{B970A567-BDD3-405D-9714-315B8BB91032}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +31,14 @@ Global
 		{3B95E1BE-3339-43FD-AED6-EC0EF3C8AF2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3B95E1BE-3339-43FD-AED6-EC0EF3C8AF2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3B95E1BE-3339-43FD-AED6-EC0EF3C8AF2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCEBD335-D0C5-4AF8-87F7-42117A10B82E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCEBD335-D0C5-4AF8-87F7-42117A10B82E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCEBD335-D0C5-4AF8-87F7-42117A10B82E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCEBD335-D0C5-4AF8-87F7-42117A10B82E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B970A567-BDD3-405D-9714-315B8BB91032}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B970A567-BDD3-405D-9714-315B8BB91032}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B970A567-BDD3-405D-9714-315B8BB91032}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B970A567-BDD3-405D-9714-315B8BB91032}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
