@@ -275,20 +275,34 @@ foreach (Passenger passenger in passengers)
 {
     decimal flightCost = passenger switch
     {
-        FirstClassPassenger p when p.AirMiles > 35_000 => 1_500M,
-        FirstClassPassenger p when p.AirMiles > 15_000 => 1_750M,
-        FirstClassPassenger _ => 2_000M,
+        //lambda expressions for pattern matching
+        FirstClassPassenger p => p.AirMiles switch 
+        {
+            > 35_000 => 1_500M,
+            > 15_000 => 1_750M,
+            _ => 2_000M,
+        }, 
         BusinessClassPassenger _ => 1_000M,
         CoachClassPassenger p when p.CarryOnKG < 10.0 => 500M,
         CoachClassPassenger _ => 650M,
         _ => 800M
     };
-    WriteLine();    
+    WriteLine($"Flight costs {flightCost:C} for {passenger}");    
 }
 #endregion
 
-#region Flight Patterns Example
-
+#region Record Example
+//gives error: 
+//can only be assigned in an object initializer, or on 'this'
+//or 'base' in an instance constructor or an 'init' accessor
+/*
+ImmutablePerson jeff = new()
+{ 
+    FirstName = "Jeff",
+    LastName = "Winger"
+};
+jeff.FirstName = "Geoff";
+*/
 #endregion
 
 #region Flight Patterns Example
