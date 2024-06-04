@@ -89,4 +89,16 @@ public class Person
         return Procreate(this, partner);
     }
     #endregion
+
+    #region Operators
+    public static bool operator +(Person p1, Person p2)
+    {
+        Marry(p1, p2);
+        // Confirm they are both now married.
+        return p1.Married && p2.Married;
+    }
+    #endregion
+
+    #region
+    #endregion
 }
