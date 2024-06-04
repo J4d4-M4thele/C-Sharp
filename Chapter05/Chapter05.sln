@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PacktLibraryNetStandard2", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeopleApp", "PeopleApp\PeopleApp.csproj", "{6F2D984F-35D2-48F6-A198-61A402840397}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PacktLibraryModern", "PacktLibraryModern\PacktLibraryModern.csproj", "{3B95E1BE-3339-43FD-AED6-EC0EF3C8AF2E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{6F2D984F-35D2-48F6-A198-61A402840397}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6F2D984F-35D2-48F6-A198-61A402840397}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6F2D984F-35D2-48F6-A198-61A402840397}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B95E1BE-3339-43FD-AED6-EC0EF3C8AF2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B95E1BE-3339-43FD-AED6-EC0EF3C8AF2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B95E1BE-3339-43FD-AED6-EC0EF3C8AF2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B95E1BE-3339-43FD-AED6-EC0EF3C8AF2E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
