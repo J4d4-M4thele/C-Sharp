@@ -102,6 +102,7 @@ harry.Poke();
 #endregion
 
 #region Comparing objects when Sorting
+/*
 Person?[] people =
 {
     null,
@@ -117,12 +118,72 @@ OutputPeopleNames(people, "Initial List of People:");
 Array.Sort(people);
 
 OutputPeopleNames(people, "After sorting implementing IComparable interface:");
+
+Array.Sort(people, new PersonComparer());
+
+OutputPeopleNames(people, "After sorting implementing IComparer interface:");
+*/
 #endregion
 
-#region Operators
+#region Boxing and Unboxing
+/*
+//implicit boxing
+int n = 3;
+object o = n;
+//casting/explicit unboxing
+n = (int) o;
+
+string name = "Hilda";
+DateTime hired = new(2024, 2, 21);
+int days = 31;
+
+WriteLine(format: "{0} hired on {1:D} on a {2} day contract.",name, hired, days);
+*/
+#endregion
+
+#region Equality of Types
+/*
+int a = 3;
+int b = 3;
+WriteLine($"a: {a}, b: {b}");
+//true
+//value and types are the same
+WriteLine($"a == b: {a == b}");
+
+Person p1 = new() { Name = "Kevin" };
+Person p2 = new() { Name = "Kevin" };
+WriteLine($"p1: {p1}, p2: {p2}");
+WriteLine($"p1.Name: {p1.Name}, p2.Name: {p2.Name}");
+//false
+//objects have different locations
+WriteLine($"p1 == p2: {p1 == p2}");
+
+//location reference for 3 is 1
+Person p3 = p1;
+WriteLine($"p3: {p3}");
+WriteLine($"p3.Name: {p3.Name}");
+//true
+WriteLine($"p1 == p3: {p1 == p3}");
+
+// string is the only class reference type implemented to
+// act like a value type for equality.
+WriteLine($"p1.Name: {p1.Name}, p2.Name: {p2.Name}");
+WriteLine($"p1.Name == p2.Name: {p1.Name == p2.Name}");
+*/
+#endregion
+
+#region Struct Types
 
 #endregion
 
-#region Operators
+#region 
+
+#endregion
+
+#region 
+
+#endregion
+
+#region 
 
 #endregion
