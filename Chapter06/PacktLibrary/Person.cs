@@ -90,7 +90,7 @@ public class Person
     }
     #endregion
 
-    #region 
+    #region Static Methods
     //addition
     public static bool operator +(Person p1, Person p2)
     {
@@ -107,6 +107,25 @@ public class Person
     }
     #endregion
 
-    #region
+    #region Events
+    //delegated field defines event
+    public EventHandler? Shout;
+
+    //data field related to event
+    public int AngerLevel;
+
+    //triggers eventin certain conditions
+    public void Poke() 
+    { 
+        AngerLevel++;
+        if(AngerLevel < 3) return;
+
+        //if sth. is listening to the event
+        if(Shout is not null)
+        {
+            //call delegate to raise event
+            Shout(this, EventArgs.Empty);
+        }
+    }
     #endregion
 }

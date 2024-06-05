@@ -57,6 +57,7 @@ for (int i = 0; i < lamech.Children.Count; i++)
 #endregion
 
 #region Non-Generic Types
+/*
 System.Collections.Hashtable lookupObject = new();
 lookupObject.Add(key: 1, value: "Alpha");
 lookupObject.Add(key: 2, value: "Beta");
@@ -71,14 +72,32 @@ arg1: lookupObject[key]);
 WriteLine(format: "Key {0} has value: {1}",
 arg0: harry,
 arg1: lookupObject[harry]);
+*/
 #endregion
 
-#region Operators
+#region Generic Types
+/*
+Dictionary<int, string> lookupIntString = new();
+lookupIntString.Add(key: 1, value: "Alpha");
+lookupIntString.Add(key: 2, value: "Beta");
+lookupIntString.Add(key: 3, value: "Gamma");
+//lookupIntString.Add(key: harry, value: "Delta"); //gives error as key must be an int
 
+key = 3;
+WriteLine(format: "Key {0} has value: {1}",
+    arg0: key,
+    arg1: lookupIntString[key]);
+*/
 #endregion
 
-#region Operators
+#region Event Handlers
+//assign method to Shout delegate
+harry.Shout = Harry_Shout;
 
+harry.Poke();
+harry.Poke();
+harry.Poke();
+harry.Poke();
 #endregion
 
 #region Operators
