@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace Packt.Shared;
 
-namespace PacktLibrary
+public interface IPlayable
 {
-    internal interface IPlayable
+    void Play();
+    void Pause();
+    void Stop() // Default interface implementation.
     {
+        WriteLine("Default implementation of Stop.");
     }
 }
