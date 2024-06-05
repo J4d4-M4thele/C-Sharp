@@ -1,6 +1,6 @@
 ﻿namespace Packt.Shared;
 
-public class Person
+public class Person : IComparable<Person?>
 {
     #region Properties
     public string? Name { get; set; }
@@ -109,7 +109,7 @@ public class Person
 
     #region Events
     //delegated field defines event
-    public EventHandler? Shout;
+    public event EventHandler? Shout;
 
     //data field related to event
     public int AngerLevel;
@@ -126,6 +126,40 @@ public class Person
             //call delegate to raise event
             Shout(this, EventArgs.Empty);
         }
+    }
+
+    public int CompareTo(Person? other)
+    {
+        int pos;
+
+        if (other is not null) 
+        { 
+            if((Name is not null) && (other.Name is not null))
+            {
+                pos = Name.CompareTo(other.Name);
+            }
+            else if((Name is not null) && (other.Name is null))
+            {
+                pos = -1; // this Person precedes other Person.
+            }
+            else if ((Name is null) && (other.Name is not null))
+            {
+                pos = 1; // this Person follows other Person.
+            }
+            else
+            {
+                pos = 0; // this and other are at same position.
+            }
+        }
+        else if (other is null)
+        {
+            pos = -1; // this Person precedes other Person.
+        }
+        else
+        {
+            pos = 0;
+        }
+        return pos;
     }
     #endregion
 }

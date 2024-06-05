@@ -92,7 +92,8 @@ WriteLine(format: "Key {0} has value: {1}",
 
 #region Event Handlers
 //assign method to Shout delegate
-harry.Shout = Harry_Shout;
+harry.Shout += Harry_Shout;
+harry.Shout += Harry_Shout_2;
 
 harry.Poke();
 harry.Poke();
@@ -100,8 +101,22 @@ harry.Poke();
 harry.Poke();
 #endregion
 
-#region Operators
+#region Comparing objects when Sorting
+Person?[] people =
+{
+    null,
+    new() {Name = "Simon"},
+    new() { Name = "Jenny" },
+    new() { Name = "Adam" },
+    new() { Name = null },
+    new() { Name = "Richard" }
+};
 
+OutputPeopleNames(people, "Initial List of People:");
+
+Array.Sort(people);
+
+OutputPeopleNames(people, "After sorting implementing IComparable interface:");
 #endregion
 
 #region Operators
