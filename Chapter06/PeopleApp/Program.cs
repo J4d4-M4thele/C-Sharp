@@ -241,10 +241,26 @@ catch(PersonException ex)
 }
 #endregion
 
-#region
-
+#region Using static methods
+string email1 = "pamela@test.com";
+string email2 = "ian&test.com";
+WriteLine("{0} is a valid e-mail address: {1}",
+arg0: email1,
+arg1: email1.IsValidEmail());
+WriteLine("{0} is a valid e-mail address: {1}",
+arg0: email2,
+arg1: email2.IsValidEmail());
 #endregion
 
-#region
-
+#region Mutability and Records
+C1 c1 = new() { Name = "Bob" };
+c1.Name = "Bill";
+C2 c2 = new(Name: "Bob");
+//c2.Name = "Bill"; // CS8852: Init-only property.
+S1 s1 = new() { Name = "Bob" };
+s1.Name = "Bill";
+S2 s2 = new(Name: "Bob");
+s2.Name = "Bill";
+S3 s3 = new(Name: "Bob");
+//s3.Name = "Bill"; // CS8852: Init-only property.
 #endregion
