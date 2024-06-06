@@ -184,15 +184,3 @@ WriteLine($"({dv4.X}, {dv4.Y})");
 WriteLine($"dv1.Equals(dv5): {dv1.Equals(dv5)})");
 //WriteLine($"dv1 == dv5: {dv1 == dv5})"); //gives error unless record struct
 #endregion
-
-#region 
-
-#endregion
-
-#region 
-
-#endregion
-
-#region 
-
-#endregion
