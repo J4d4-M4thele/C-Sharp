@@ -173,6 +173,7 @@ WriteLine($"p1.Name == p2.Name: {p1.Name == p2.Name}");
 #endregion
 
 #region Struct Types
+/*
 DisplacementVector dv1 = new(3, 5);
 DisplacementVector dv2 = new(-2, 7);
 DisplacementVector dv3 = dv1 + dv2;
@@ -183,4 +184,59 @@ WriteLine($"({dv1.X}, {dv1.Y}) + ({dv2.X}, {dv2.Y}) = ({dv3.X},{ dv3.Y})");
 WriteLine($"({dv4.X}, {dv4.Y})");
 WriteLine($"dv1.Equals(dv5): {dv1.Equals(dv5)})");
 //WriteLine($"dv1 == dv5: {dv1 == dv5})"); //gives error unless record struct
+*/
+#endregion
+
+#region Inheritence
+Employee john = new()
+{
+    Name = "John Jones",
+    Born = new(year: 1990, month: 7, day: 28,
+                hour: 0, minute: 0, second: 0, offset: TimeSpan.Zero)
+};
+
+john.WriteToConsole();
+#endregion
+
+#region Polymorphism
+Employee aliceInEmployee = new()
+{
+    Name = "Alice",
+    EmpCode = "AA123"
+};
+
+Person aliceInPerson = aliceInEmployee;
+aliceInEmployee.WriteToConsole();
+aliceInPerson.WriteToConsole();
+WriteLine(aliceInEmployee.ToString());
+WriteLine(aliceInPerson.ToString());
+#endregion
+
+#region Explicit Casting
+if(aliceInPerson is Employee)
+{
+    WriteLine($"{nameof(aliceInPerson)} is an Employee.");
+    Employee explicitAlice = (Employee)aliceInPerson;
+}
+#endregion
+
+#region Using as to Cast
+Employee? aliceAsEmployee = aliceInPerson as Employee;
+
+if(aliceAsEmployee is not null)
+{
+    WriteLine($"{nameof(aliceInPerson)} as an Employee.");
+}
+#endregion
+
+#region
+
+#endregion
+
+#region
+
+#endregion
+
+#region
+
 #endregion

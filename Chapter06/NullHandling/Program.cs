@@ -39,19 +39,3 @@ int? authorNameLength = authorName?.Length ?? 25;
 
 
 #endregion
-
-#region
-
-#endregion
-
-#region
-
-#endregion
-
-#region
-
-#endregion
-
-#region
-
-#endregion
