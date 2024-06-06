@@ -229,8 +229,16 @@ if(aliceAsEmployee is not null)
 }
 #endregion
 
-#region
-
+#region Inheriting Exceptions
+try 
+{
+    john.TimeTravel(when: new(1999, 12, 31));
+    john.TimeTravel(when: new(1950, 12, 25));
+}
+catch(PersonException ex)
+{
+    WriteLine(ex.Message);
+}
 #endregion
 
 #region
