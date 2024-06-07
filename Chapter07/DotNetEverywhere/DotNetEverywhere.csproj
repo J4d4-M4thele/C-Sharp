@@ -8,6 +8,9 @@
 	  <RuntimeIdentifiers>
 		  win10-x64;osx-x64;osx.11.0-arm64;linux-x64;linux-arm64
 	  </RuntimeIdentifiers>
+	  <DebugType>embedded</DebugType>
+	  <PublishTrimmed>true</PublishTrimmed> <!--Enable trimming.-->
+	  <TrimMode>partial</TrimMode> <!--Set assembly-level trimming.-->
   </PropertyGroup>
 
 	<ItemGroup>
