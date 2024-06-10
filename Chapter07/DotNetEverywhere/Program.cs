@@ -2,11 +2,11 @@
 
 WriteLine($"OS Version is {Environment.OSVersion}");
 
-if(OperatingSystem.IsMacOS())
+if (OperatingSystem.IsMacOS())
 {
     WriteLine("I am macOS.");
 }
-else if(OperatingSystem.IsWindowsVersionAtLeast(major: 10, build: 22000))
+else if (OperatingSystem.IsWindowsVersionAtLeast(major: 10, build: 22000))
 {
     WriteLine("I am Windows 11.");
 }
