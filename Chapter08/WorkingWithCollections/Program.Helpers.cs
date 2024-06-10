@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace WorkingWithCollections
+﻿partial class Program
 {
-    internal class Program
+    private static void OutputCollection<T>(
+        string title, IEnumerable<T> collection)
     {
+        WriteLine($"{title}: ");
+        foreach (T item in collection)
+        {
+            WriteLine($" {item}");
+        }
     }
 }

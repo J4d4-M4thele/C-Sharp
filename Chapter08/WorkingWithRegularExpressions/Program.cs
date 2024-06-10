@@ -35,22 +35,3 @@ foreach (Match film in filmSmart)
 }
 #endregion
 
-#region
-
-#endregion
-
-#region
-
-#endregion
-
-#region
-
-#endregion
-
-#region
-
-#endregion
-
-#region
-
-#endregion
