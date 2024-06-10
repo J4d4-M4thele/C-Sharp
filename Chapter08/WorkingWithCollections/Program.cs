@@ -22,6 +22,7 @@ OutputCollection("After removing two cities", cities);
 #endregion
 
 #region Dictionaries
+/*
 //dictionaries are hashmaps
 StringDictionary keywords = new();
 //named parameters
@@ -42,14 +43,44 @@ foreach (KeyValuePair<string,string> item in keywords)
 //looking up information
 string key = "long";
 WriteLine($"The definition of {key} is {keywords[key]}");
+*/
 #endregion
 
-#region
+#region Sets
+/*
+//HashSets
+HashSet<string> names = new();
 
+foreach (string name in new[] { "Adam", "Barry", "Charlie", "Barry"})
+{
+    bool added = names.Add(name);
+    WriteLine($"{name} was added: {added}.");
+}
+WriteLine($"names set: {string.Join(",", names)}");
+*/
 #endregion
 
-#region
+#region Queues
+Queue<string> coffee = new();
+coffee.Enqueue("Damir"); // Front of the queue.
+coffee.Enqueue("Andrea");
+coffee.Enqueue("Ronald");
+coffee.Enqueue("Amin");
+coffee.Enqueue("Irina"); // Back of the queue.
 
+OutputCollection("Initial queue from front to back", coffee);
+
+// Server handles next person in queue.
+string served = coffee.Dequeue();
+WriteLine($"Served: {served}.");
+
+// Server handles next person in queue.
+served = coffee.Dequeue();
+WriteLine($"Served: {served}.");
+OutputCollection("Current queue from front to back", coffee);
+
+WriteLine($"{coffee.Peek()} is next in line.");
+OutputCollection("Current queue from front to back", coffee);
 #endregion
 
 #region
