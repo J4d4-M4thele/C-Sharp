@@ -144,15 +144,3 @@ WriteLine($" Contains {info.Length} bytes.");
 WriteLine($" Last accessed: {info.LastAccessTime}");
 WriteLine($" Has readonly set to {info.IsReadOnly}.");
 #endregion
-
-#region
-
-#endregion
-
-#region
-
-#endregion
-
-#region
-
-#endregion

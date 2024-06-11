@@ -5,6 +5,8 @@ VisualStudioVersion = 17.10.34928.147
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkingWithFileSystems", "WorkingWithFileSystems\WorkingWithFileSystems.csproj", "{FE5E4C4B-4FEC-45DB-860F-AE13E77FEC92}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkingWithStreams", "WorkingWithStreams\WorkingWithStreams.csproj", "{E0899A63-90B9-45FF-8BC8-0AD33894F3C6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{FE5E4C4B-4FEC-45DB-860F-AE13E77FEC92}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FE5E4C4B-4FEC-45DB-860F-AE13E77FEC92}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FE5E4C4B-4FEC-45DB-860F-AE13E77FEC92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0899A63-90B9-45FF-8BC8-0AD33894F3C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0899A63-90B9-45FF-8BC8-0AD33894F3C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0899A63-90B9-45FF-8BC8-0AD33894F3C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0899A63-90B9-45FF-8BC8-0AD33894F3C6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
