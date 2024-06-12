@@ -1,6 +1,7 @@
 ﻿using System.Text; //for Encoding
 
 #region Encoding strings as byte arrays
+/*
 WriteLine("Encodings");
 WriteLine("[1] ASCII");
 WriteLine("[2] UTF-7");
@@ -48,24 +49,6 @@ foreach (byte b in encoded)
 // Decode the byte array back into a string and display it.
 string decoded = encoder.GetString(encoded);
 WriteLine($"Decoded: {decoded}");
+*/
 #endregion
 
-#region
-
-#endregion
-
-#region
-
-#endregion
-
-#region
-
-#endregion
-
-#region
-
-#endregion
-
-#region
-
-#endregion
