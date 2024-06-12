@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.34928.147
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkingWithFileSystems", "WorkingWithFileSystems\WorkingWithFileSystems.csproj", "{FE5E4C4B-4FEC-45DB-860F-AE13E77FEC92}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkingWithFileSystems", "WorkingWithFileSystems\WorkingWithFileSystems.csproj", "{FE5E4C4B-4FEC-45DB-860F-AE13E77FEC92}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkingWithStreams", "WorkingWithStreams\WorkingWithStreams.csproj", "{E0899A63-90B9-45FF-8BC8-0AD33894F3C6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkingWithStreams", "WorkingWithStreams\WorkingWithStreams.csproj", "{E0899A63-90B9-45FF-8BC8-0AD33894F3C6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkingWithRandomAccess", "WorkingWithRandomAccess\WorkingWithRandomAccess.csproj", "{76CAD476-CDFD-4E27-9011-43BB2B57C36C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkingWithRandomAccess", "WorkingWithRandomAccess\WorkingWithRandomAccess.csproj", "{76CAD476-CDFD-4E27-9011-43BB2B57C36C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkingWithEncodings", "WorkingWithEncodings\WorkingWithEncodings.csproj", "{5024B593-D487-40DE-BE54-8FEB4B558C44}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkingWithEncodings", "WorkingWithEncodings\WorkingWithEncodings.csproj", "{5024B593-D487-40DE-BE54-8FEB4B558C44}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkingWithSerialization", "WorkingWithSerialization\WorkingWithSerialization.csproj", "{413E8037-8DB0-4674-844F-D46FD04EFE0A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{5024B593-D487-40DE-BE54-8FEB4B558C44}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5024B593-D487-40DE-BE54-8FEB4B558C44}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5024B593-D487-40DE-BE54-8FEB4B558C44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{413E8037-8DB0-4674-844F-D46FD04EFE0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{413E8037-8DB0-4674-844F-D46FD04EFE0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{413E8037-8DB0-4674-844F-D46FD04EFE0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{413E8037-8DB0-4674-844F-D46FD04EFE0A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
