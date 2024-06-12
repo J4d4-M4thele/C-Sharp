@@ -25,6 +25,14 @@ SetEnvironmentVariable(password_key, "Pa$$w0rd");
 
 string? password = GetEnvironmentVariable(password_key);
 WriteLine($"{password_key}: {password}");
+
+string secret_key = "MY_SECRET";
+string? secret = GetEnvironmentVariable(secret_key, EnvironmentVariableTarget.Process);
+WriteLine($"Process - {secret_key}: {secret}");
+secret = GetEnvironmentVariable(secret_key, EnvironmentVariableTarget.Machine);
+WriteLine($"Machine - {secret_key}: {secret}");
+secret = GetEnvironmentVariable(secret_key, EnvironmentVariableTarget.User);
+WriteLine($"User - {secret_key}: {secret}");
 #endregion
 
 #region
