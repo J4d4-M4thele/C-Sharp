@@ -200,5 +200,25 @@ partial class Program
             p.ProductName, p.Stock, p.Discontinued);
         }
     }
+
+    private static void LazyLoadingWithNoTracking()
+    {
+        using NorthwindDb db = new();
+
+        SectionTitle("Lazy-loading with no tracking");
+        
+        IQueryable<Product>? products = db.Products?.AsNoTracking();
+        
+        if (products is null || !products.Any())
+        {
+            Fail("No products found.");
+            return;
+        }
+        foreach (Product p in products)
+        {
+            WriteLine("{0} is in category named {1}.",
+            p.ProductName, p.Category.CategoryName);
+        }
+    }
 }
 

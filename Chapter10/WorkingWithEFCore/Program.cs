@@ -6,8 +6,9 @@ WriteLine($"Provider: {db.Database.ProviderName}");
 
 //calling methods from partial classes
 ConfigureConsole();
-QueryCategories();
+//QueryCategories();
 //FilteredIncludes();
 //QueryingProducts();
 //GettingOneProduct();
 //QueryingWithLike();
+LazyLoadingWithNoTracking();
