@@ -77,6 +77,26 @@ partial class Program
         return (affected, updateProduct.ProductId);
     }
 
+    private static (int affected, int[]? productIds) IncreaseProductPricesBetter(
+        string productNameStartsWith, decimal amount)
+    {
+        using NorthwindDb db = new();
+
+        if (db.Products is null) return (0, null);
+        
+        // Get products whose name starts with the parameter value.
+        IQueryable<Product>? products = db.Products.Where(
+        p => p.ProductName.StartsWith(productNameStartsWith));
+        
+        int affected = products.ExecuteUpdate(s => s.SetProperty(
+        p => p.Cost, // Property selector lambda expression.
+        p => p.Cost + amount)); // Value to update to lambda expression.
+        
+        int[] productIds = products.Select(p => p.ProductId).ToArray();
+        return (affected, productIds);
+    }
+
+    //DELETE
     private static int DeleteProducts(string productNameStartsWith)
     {
         using NorthwindDb db = new();
@@ -96,6 +116,29 @@ partial class Program
         }
 
         int affected = db.SaveChanges();
+        return affected;
+    }
+
+    private static int DeleteProductsBetter(
+        string productNameStartsWith)
+    {
+        using NorthwindDb db = new();
+
+        int affected = 0;
+
+        IQueryable<Product>? products = db.Products?.Where(
+        p => p.ProductName.StartsWith(productNameStartsWith));
+        
+        if (products is null || !products.Any())
+        {
+            WriteLine("No products found to delete.");
+            return 0;
+        }
+        else
+        {
+            affected = products.ExecuteDelete();
+        }
+
         return affected;
     }
 }
