@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore; // for DbContext
+using Microsoft.EntityFrameworkCore.Diagnostics;//for RelationalEventId
 
 namespace Northwind.EntityModels;
 
@@ -19,6 +20,15 @@ public class NorthwindDb : DbContext
         string connectionString = $"Data Source={path}";
         WriteLine($"Connection: {connectionString}");
         optionsBuilder.UseSqlite(connectionString);
+
+        optionsBuilder.LogTo(WriteLine,
+            //output ids
+            new[] {RelationalEventId.CommandExecuting})//console method
+#if DEBUG
+            .EnableSensitiveDataLogging()//incl. SQL parameters
+            .EnableDetailedErrors()
+#endif
+            ;
     }
 
     protected override void OnModelCreating(
@@ -28,6 +38,10 @@ public class NorthwindDb : DbContext
             .Property(category => category.CategoryName)
             .IsRequired()
             .HasMaxLength(15);
+
+        //global filter to remove discontinued products
+        modelBuilder.Entity<Product>()
+            .HasQueryFilter(p => !p.Discontinued);
 
         if (Database.ProviderName?.Contains("sqlite") ?? false)
         {
