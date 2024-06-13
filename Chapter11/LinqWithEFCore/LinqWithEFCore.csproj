@@ -8,6 +8,10 @@
   </PropertyGroup>
 
 	<ItemGroup>
+		<Using Include="System.Console" Static="true" />
+	</ItemGroup>
+	
+	<ItemGroup>
 		<!--To use SQLite-->
 		<PackageReference Version="8.0.0" Include="Microsoft.EntityFrameworkCore.Sqlite" />
 	</ItemGroup>
