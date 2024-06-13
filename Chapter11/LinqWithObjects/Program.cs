@@ -28,7 +28,3 @@ string[] names = { "Michael", "Pam", "Jim", "Dwight",
 #region Working with sets and bags
 WorkingWithSets();
 #endregion
-
-#region
-
-#endregion
