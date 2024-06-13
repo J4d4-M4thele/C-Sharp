@@ -9,8 +9,7 @@
 
 	<ItemGroup>
 		<!--To use SQLite-->
-		<PackageReference Version="8.0.0"
-		Include="Microsoft.EntityFrameworkCore.Sqlite" />
+		<PackageReference Version="8.0.0" Include="Microsoft.EntityFrameworkCore.Sqlite" />
 	</ItemGroup>
 
 </Project>
