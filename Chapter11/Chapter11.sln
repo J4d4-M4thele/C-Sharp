@@ -5,6 +5,8 @@ VisualStudioVersion = 17.10.34928.147
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqWithObjects", "LinqWithObjects\LinqWithObjects.csproj", "{7EEC6681-F58D-4F35-89AF-CB1C98FBFC6D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqWithEFCore", "LinqWithEFCore\LinqWithEFCore.csproj", "{AB180D92-AE8F-4403-8976-99BD6B70F844}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{7EEC6681-F58D-4F35-89AF-CB1C98FBFC6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7EEC6681-F58D-4F35-89AF-CB1C98FBFC6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7EEC6681-F58D-4F35-89AF-CB1C98FBFC6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB180D92-AE8F-4403-8976-99BD6B70F844}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB180D92-AE8F-4403-8976-99BD6B70F844}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB180D92-AE8F-4403-8976-99BD6B70F844}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB180D92-AE8F-4403-8976-99BD6B70F844}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

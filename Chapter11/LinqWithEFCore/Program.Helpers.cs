@@ -1,12 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Globalization; //for CultureInfo
 
-namespace LinqWithEFCore
+partial class Program
 {
-    internal class Program
+    private static void ConfigureConsole(string culture = "en-US",
+        bool useComputerCulture = false)
     {
+        OutputEncoding = System.Text.Encoding.UTF8;
+
+        if (!useComputerCulture) 
+        { 
+            CultureInfo.CurrentCulture = CultureInfo.GetCultureInfo(culture);
+        }
+
+        WriteLine($"CurrentCulture: {CultureInfo.CurrentCulture.DisplayName}");
+    }
+
+    private static void SectionTitle(string title) 
+    { 
+        ConsoleColor prevColor = ForegroundColor;
+        ForegroundColor = ConsoleColor.DarkYellow;
+        WriteLine($"*** {title} ***");
+        ForegroundColor = prevColor;
     }
 }
