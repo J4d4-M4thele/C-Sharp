@@ -6,7 +6,7 @@ if (password.Length < 8)
 }
 else
 {
-    WriteLine("Your password is storng.");
+    WriteLine("Your password is stng.");
 }
 #endregion
 

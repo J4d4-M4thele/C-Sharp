@@ -2,7 +2,7 @@
 //#error version
 using System.Reflection;
 
-Console.WriteLine("Hello, World!");
+WriteLine("Hello, World!");
 
 //STATEMENTS
 decimal subtotal = 2499;
@@ -38,7 +38,7 @@ foreach (AssemblyName name in myApp.GetReferencedAssemblies())
     }
 
     // Output the count of types and their methods.
-    Console.WriteLine("{0:N0} types with {1:N0} methods in {2} assembly.",
+    WriteLine("{0:N0} types with {1:N0} methods in {2} assembly.",
       arg0: a.DefinedTypes.Count(),
       arg1: methodCount,
       arg2: name.Name);

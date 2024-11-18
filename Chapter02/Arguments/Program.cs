@@ -17,10 +17,10 @@ CursorSize = int.Parse(args[2]);
 #endregion
 
 #region Command Line Args
-/*Console.WriteLine($"There are {args.Length} arguments.");
+Console.WriteLine($"There are {args.Length} arguments.");
 
 foreach (string arg in args)
 {
     Console.WriteLine(arg);
-}*/
+}
 #endregion

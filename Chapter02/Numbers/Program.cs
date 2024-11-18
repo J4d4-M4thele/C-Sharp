@@ -1,4 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
+/*
 #region Storing Numbers
 // An unsigned integer is a positive whole number or 0.
 using System;
@@ -126,9 +127,9 @@ var price = 4.99M; // in pounds sterling.
 var fruit = "Apples"; // string values use double-quotes.
 var letter = 'Z'; // char values use single-quotes.
 var tired = true; // Booleans can only be true or false.
-*/
 #endregion
-
+*/
+/*
 #region Instantiating Objects
 Person kim = new();
 kim.BirthDate = new(1990, 12, 14);
@@ -145,9 +146,10 @@ class Person {
     public DateTime BirthDate;
 }
 #endregion
+*/
 
 #region Getting and Setting Values
-/*
+
 Console.WriteLine($"default(int) = {default(int)}");
 Console.WriteLine($"default(bool) = {default(bool)}");
 Console.WriteLine($"default(DateTime) = {default(DateTime)}");
@@ -157,13 +159,13 @@ int number = 13;
 Console.WriteLine($"number set to: {number}");
 number = default;
 Console.WriteLine($"number reset to its default: {number}");
-*/
+
 #endregion
 
 #region Displaying Output
-/*
+
 Console.WriteLine("A");
 Console.WriteLine("B");
 Console.WriteLine("C");
-*/
+
 #endregion

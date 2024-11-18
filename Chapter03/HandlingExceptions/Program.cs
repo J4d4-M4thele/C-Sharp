@@ -1,5 +1,5 @@
 ﻿#region Try Catch Statements
-/*
+
 WriteLine("Before Parsing");
 Write("What is your age? ");
 string? input = ReadLine();
@@ -15,7 +15,7 @@ catch (Exception ex)
     WriteLine($"{ex.GetType} says {ex.Message}");
 }
 WriteLine("After Parsing");
-*/
+
 #endregion
 
 #region Catching with Filters
@@ -57,6 +57,7 @@ checked
 */
 
 //with try-catch block
+/*
 try
 {
     int x = int.MaxValue - 1;
@@ -72,8 +73,9 @@ catch (OverflowException)
 {
     WriteLine("The code overflowed but I caught the exception.");
 }
+*/
 #endregion
-
+/*
 #region Uncheck (disables overflow's check)
 unchecked
 {
@@ -85,3 +87,4 @@ unchecked
     WriteLine($"After decrementing: {y}");
 }
 #endregion
+*/
