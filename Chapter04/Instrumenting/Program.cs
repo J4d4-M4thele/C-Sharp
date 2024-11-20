@@ -5,7 +5,7 @@ Debug.WriteLine("Debug says, I am watching!");
 Trace.WriteLine("Trace says, I am watching!");
 #endregion
 
-#region Trace Listiners
+#region Trace Listeners
 string logPath = Path.Combine(Environment
     .GetFolderPath(Environment.SpecialFolder.DesktopDirectory), "log.txt");
 
@@ -33,8 +33,4 @@ LogSourceDetails(unitsInStock > 10);
 // Close the text file (also flushes) and release resources.
 Debug.Close();
 Trace.Close();
-#endregion
-
-#region Trace Listiners
-
 #endregion

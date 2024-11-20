@@ -1,18 +1,18 @@
 ﻿#region Times Tables Function
-//TimesTable(7);
+TimesTable(7);
 #endregion
 
 #region Calculate Tax
-/*
+
 ConfigureConsole(useComputerCulture: true); //ZAR
 //ConfigureConsole(); //USD
 decimal taxToPay = CalculateTax(amount: 149, regionalCode: "FR");
 WriteLine($"You must pay {taxToPay:C} in tax.");
-*/
+
 #endregion
 
 #region Cardinal to Ordinal
-//RunCardinalToOrdinal();
+RunCardinalToOrdinal();
 #endregion
 
 #region Recursion
@@ -23,8 +23,4 @@ RunFactorial();
 #region Fibbonacci Numbers
 RunFibImperative();
 RunFibFunctional();
-#endregion
-
-#region Cardinal to Ordinal
-
 #endregion

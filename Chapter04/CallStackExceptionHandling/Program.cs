@@ -14,6 +14,7 @@ void Beta()
     try
     {
         Processor.Gamma();
+        //Processor.Delta();
     }
     catch (Exception ex)
     {
