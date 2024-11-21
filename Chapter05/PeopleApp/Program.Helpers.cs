@@ -2,6 +2,7 @@
 
 partial class Program
 {
+    //allows for special currency symbols
     private static void ConfigureConsole(
         string culture = "en-US",
         bool useComputerCulture = false,

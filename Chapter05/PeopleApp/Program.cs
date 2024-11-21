@@ -49,7 +49,7 @@ for (int childIndex = 0; childIndex < bob.Children.Count; childIndex++)
 #endregion
 
 #region Alice
-/*
+
 //instatiating and setting fields
 Person alice = new()
 {
@@ -60,7 +60,6 @@ TimeSpan.Zero)
 };
 WriteLine(format: "{0} was born on {1:d}.", // Short date.
 arg0: alice.Name, arg1: alice.Born);
-*/
 #endregion
 
 #region BankAccount Example
@@ -85,7 +84,7 @@ arg1: gerrierAccount.Balance * BankAccount.InterestRate);
 #endregion
 
 #region Book Example
-/*
+
 WriteLine();
 Book book = new()
 { 
@@ -96,12 +95,12 @@ WriteLine("{0}: {1} written by {2} has {3:N0} pages.",
 book.Isbn, book.Title, book.Author, book.PageCount);
 
 
-Book book = new(isbn: "978-1803237800", title: "C# 12 and .NET 8 - Modern Cross-Platform Development Fundamentals")
+Book book2 = new(isbn: "978-1803237800", title: "C# 12 and .NET 8 - Modern Cross-Platform Development Fundamentals")
 {
     Author = "Mark J. Price",
     PageCount = 821
 };
-*/
+
 #endregion
 
 #region Using Constructors
@@ -337,8 +336,4 @@ WriteLine($"ac1 == ac2: {ac1 == ac2}");
 AnimalRecord ar1 = new() { Name = "Rex" };
 AnimalRecord ar2 = new() { Name = "Rex" };
 WriteLine($"ar1 == ar2: {ar1 == ar2}");
-#endregion
-
-#region Flight Patterns Example
-
 #endregion
