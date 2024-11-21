@@ -1,6 +1,9 @@
 ﻿namespace Packt.Shared;
 
 [Flags]
+//decorating the enum type with the System.Flags attribute allows Program.cs
+//to automatically match with multiple values as a comma-separated string instead of
+//returning an int value.
 public enum WondersOfTheAncientWorld : byte
 {
     None = 0b_0000_0000, //0

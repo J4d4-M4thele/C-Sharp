@@ -41,14 +41,14 @@ public partial class Person
             switch (value?.ToLower())
             {
                 case "red":
-                case "green":
+                case "yellow":
                 case "blue":
                     _favoritePrimaryColor = value;
                     break;
                 default:
                     throw new ArgumentException(
                       $"{value} is not a primary color. " +
-                      "Choose from: red, green, blue.");
+                      "Choose from: red, yellow, blue.");
             }
         }
     }
