@@ -12,7 +12,7 @@ harry.WriteToConsole();
 #endregion
 
 #region Implementing Methods
-/*
+
 Person lamech = new() { Name = "Lamech" };
 Person adah = new() { Name = "Adah" };
 Person zillah = new() { Name = "Zillah" };
@@ -53,11 +53,11 @@ for (int i = 0; i < lamech.Children.Count; i++)
     arg1: i + 1,
     arg2: lamech.Children[i].Name);
 }
-*/
+
 #endregion
 
 #region Non-Generic Types
-/*
+
 System.Collections.Hashtable lookupObject = new();
 lookupObject.Add(key: 1, value: "Alpha");
 lookupObject.Add(key: 2, value: "Beta");
@@ -72,11 +72,11 @@ arg1: lookupObject[key]);
 WriteLine(format: "Key {0} has value: {1}",
 arg0: harry,
 arg1: lookupObject[harry]);
-*/
+
 #endregion
 
 #region Generic Types
-/*
+
 Dictionary<int, string> lookupIntString = new();
 lookupIntString.Add(key: 1, value: "Alpha");
 lookupIntString.Add(key: 2, value: "Beta");
@@ -87,7 +87,7 @@ key = 3;
 WriteLine(format: "Key {0} has value: {1}",
     arg0: key,
     arg1: lookupIntString[key]);
-*/
+
 #endregion
 
 #region Event Handlers
@@ -102,7 +102,7 @@ harry.Poke();
 #endregion
 
 #region Comparing objects when Sorting
-/*
+
 Person?[] people =
 {
     null,
@@ -122,11 +122,11 @@ OutputPeopleNames(people, "After sorting implementing IComparable interface:");
 Array.Sort(people, new PersonComparer());
 
 OutputPeopleNames(people, "After sorting implementing IComparer interface:");
-*/
+
 #endregion
 
 #region Boxing and Unboxing
-/*
+
 //implicit boxing
 int n = 3;
 object o = n;
@@ -138,11 +138,11 @@ DateTime hired = new(2024, 2, 21);
 int days = 31;
 
 WriteLine(format: "{0} hired on {1:D} on a {2} day contract.",name, hired, days);
-*/
+
 #endregion
 
 #region Equality of Types
-/*
+
 int a = 3;
 int b = 3;
 WriteLine($"a: {a}, b: {b}");
@@ -169,11 +169,11 @@ WriteLine($"p1 == p3: {p1 == p3}");
 // act like a value type for equality.
 WriteLine($"p1.Name: {p1.Name}, p2.Name: {p2.Name}");
 WriteLine($"p1.Name == p2.Name: {p1.Name == p2.Name}");
-*/
+
 #endregion
 
 #region Struct Types
-/*
+
 DisplacementVector dv1 = new(3, 5);
 DisplacementVector dv2 = new(-2, 7);
 DisplacementVector dv3 = dv1 + dv2;
@@ -184,7 +184,7 @@ WriteLine($"({dv1.X}, {dv1.Y}) + ({dv2.X}, {dv2.Y}) = ({dv3.X},{ dv3.Y})");
 WriteLine($"({dv4.X}, {dv4.Y})");
 WriteLine($"dv1.Equals(dv5): {dv1.Equals(dv5)})");
 //WriteLine($"dv1 == dv5: {dv1 == dv5})"); //gives error unless record struct
-*/
+
 #endregion
 
 #region Inheritence
