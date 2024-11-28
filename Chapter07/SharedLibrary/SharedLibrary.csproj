@@ -1,7 +1,35 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<PackageId>Packt.CSdotnet.SharedLibrary</PackageId>
+		<PackageVersion>8.0.0.0</PackageVersion>
+		<Title>InputValidityChecker</Title>
+		<Authors>Jada Mathele</Authors>
+		<PackageLicenseExpression>
+			MS-PL
+		</PackageLicenseExpression>
+		<PackageProjectUrl>
+			https://github.com/J4d4-M4thele/C-Sharp
+		</PackageProjectUrl>
+		<PackageReadmeFile>readme.md</PackageReadmeFile>
+		<PackageIcon>packt-csdotnet-sharedlibrary.png</PackageIcon>
+		<PackageRequireLicenseAcceptance>
+			true
+		</PackageRequireLicenseAcceptance>
+		<PackageReleaseNotes>
+			Example shared library packaged for NuGet.
+		</PackageReleaseNotes>
+		<Description>
+			This package contains a class with three extension methods that make use of regular expressions to validate string input values.
+		</Description>
+		<Copyright>
+			Copyright © 2016-2025 Packt Publishing Limited
+		</Copyright>
+		<PackageTags>
+			string extensions packt csharp dotnet
+		</PackageTags>
+	</PropertyGroup>
 
 </Project>

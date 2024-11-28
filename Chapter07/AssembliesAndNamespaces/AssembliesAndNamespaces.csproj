@@ -15,4 +15,13 @@
 		<Using Remove="System" />
 	</ItemGroup>
 
+	<ItemGroup>
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+	</ItemGroup>
+		
+	<ItemGroup>
+		<PackageReference Version="8.0.0"
+		Include="Microsoft.EntityFrameworkCore.Sqlite" />
+	</ItemGroup>
+
 </Project>
