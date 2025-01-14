@@ -1,4 +1,4 @@
-﻿#region Text #1
+﻿#region Length - Compare
 //length
 using System.Globalization;
 
@@ -49,7 +49,7 @@ string.Compare(text1, text2,
 StringComparison.InvariantCultureIgnoreCase));
 #endregion
 
-#region Text #2
+#region Joining - Interpolated Strings
 WriteLine();
 //joining strings
 string recombined = string.Join(" => ", citiesArray);
