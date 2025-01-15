@@ -4,7 +4,7 @@ using System.Collections.Immutable; //for ImmutableDictionary<T, T>
 using System.Collections.Frozen; //for FrozenDictionary<T, T>
 
 #region Lists
-/*
+
 List<string> cities = new();
 cities.Add("London");
 cities.Add("Paris");
@@ -20,7 +20,7 @@ OutputCollection("After inserting Sydney at index 0", cities);
 cities.RemoveAt(1);
 cities.Remove("Milan");
 OutputCollection("After removing two cities", cities);
-*/
+
 #endregion
 
 #region Dictionaries
@@ -49,7 +49,7 @@ WriteLine($"The definition of {key} is {keywords[key]}");
 #endregion
 
 #region Sets
-/*
+
 //HashSets
 HashSet<string> names = new();
 
@@ -59,11 +59,11 @@ foreach (string name in new[] { "Adam", "Barry", "Charlie", "Barry"})
     WriteLine($"{name} was added: {added}.");
 }
 WriteLine($"names set: {string.Join(",", names)}");
-*/
+
 #endregion
 
 #region Queues
-/*
+
 Queue<string> coffee = new();
 coffee.Enqueue("Damir"); // Front of the queue.
 coffee.Enqueue("Andrea");
@@ -108,11 +108,11 @@ vaccine.Enqueue("Mark", 2);
 
 WriteLine($"{vaccine.Peek()} will be next to be vaccinated.");
 OutputPQ("Current queue for vaccination", vaccine.UnorderedItems);
-*/
+
 #endregion
 
 #region Sorting Collections
-/*
+
 //UseDictonary(keywords);
 //UseDictonary(keywords.AsReadOnly());
 UseDictonary(keywords.ToImmutableDictionary());
@@ -127,7 +127,6 @@ ImmutableDictionary<string, string> newDictionary =
 
 OutputCollection("Immutable keywords dictionary", immutableKeywords);
 OutputCollection("New keywords dictionary", newDictionary);
-*/
 #endregion
 
 #region Frozen Collections
