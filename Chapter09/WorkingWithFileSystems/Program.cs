@@ -31,7 +31,7 @@ AnsiConsole.Write(table);
 #endregion
 
 #region Managing Drives
-/*
+
 SectionTitle("Managing drives");
 Table drives = new();
 drives.AddColumn("[blue]NAME[/]");
@@ -56,11 +56,11 @@ foreach (DriveInfo drive in DriveInfo.GetDrives())
 }
 
 AnsiConsole.Write(drives);
-*/
+
 #endregion
 
 #region Managing Directories
-/*
+
 SectionTitle("Managing directories");
 
 string newFolder = Combine(
@@ -81,10 +81,11 @@ ReadKey(intercept: true);
 WriteLine("Deleting it...");
 Delete(newFolder, recursive: true);
 WriteLine($"Does it exist? {Path.Exists(newFolder)}");
-*/
+
 #endregion
 
 #region Managing Files
+/*
 SectionTitle("Managing files");
 
 // Define a directory path to output files starting
@@ -123,9 +124,11 @@ WriteLine($"Reading contents of {backupFile}:");
 StreamReader textReader = File.OpenText(backupFile);
 WriteLine(textReader.ReadToEnd());
 textReader.Close();
+*/
 #endregion
 
 #region Managing Paths
+/*
 SectionTitle("Managing paths");
 
 WriteLine($"Folder Name: {GetDirectoryName(textFile)}");
@@ -133,9 +136,11 @@ WriteLine("File Name without Extension: {0}", GetFileNameWithoutExtension(textFi
 WriteLine($"File Extension: {GetExtension(textFile)}");
 WriteLine($"Random File Name: {GetRandomFileName()}");
 WriteLine($"Temporary File Name: {GetTempFileName()}");
+*/
 #endregion
 
 #region Getting File Information
+/*
 SectionTitle("Getting file information");
 
 FileInfo info = new(backupFile);
@@ -143,4 +148,5 @@ WriteLine($"{backupFile}:");
 WriteLine($" Contains {info.Length} bytes.");
 WriteLine($" Last accessed: {info.LastAccessTime}");
 WriteLine($" Has readonly set to {info.IsReadOnly}.");
+*/
 #endregion

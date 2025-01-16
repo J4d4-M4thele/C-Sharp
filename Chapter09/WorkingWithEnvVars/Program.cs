@@ -34,15 +34,3 @@ WriteLine($"Machine - {secret_key}: {secret}");
 secret = GetEnvironmentVariable(secret_key, EnvironmentVariableTarget.User);
 WriteLine($"User - {secret_key}: {secret}");
 #endregion
-
-#region
-
-#endregion
-
-#region
-
-#endregion
-
-#region
-
-#endregion
