@@ -2,7 +2,7 @@
 using System.Xml; //for XmlWriter
 
 #region Text Streams
-/*
+
 SectionTitle("Writing to text streams");
 
 //file to write to
@@ -17,11 +17,11 @@ foreach (string item in Viper.Callsigns)
 text.Close();
 
 OutputFileInfo(textFile);
-*/
+
 #endregion
 
 #region XML Streams
-/*
+
 SectionTitle("Writing to XML streams");
 
 //file path
@@ -66,7 +66,7 @@ finally
     }
 }
 OutputFileInfo(xmlFile);
-*/
+
 #endregion
 
 #region Compressing Streams
