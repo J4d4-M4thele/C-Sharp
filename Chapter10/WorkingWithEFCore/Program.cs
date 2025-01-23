@@ -5,14 +5,15 @@ using NorthwindDb db = new();
 WriteLine($"Provider: {db.Database.ProviderName}");
 
 //calling methods from partial classes
+/*
 ConfigureConsole();
-//QueryCategories();
-//FilteredIncludes();
-//QueryingProducts();
-//GettingOneProduct();
-//QueryingWithLike();
-//LazyLoadingWithNoTracking();
-
+QueryCategories();
+FilteredIncludes();
+QueryingProducts();
+GettingOneProduct();
+QueryingWithLike();
+LazyLoadingWithNoTracking();
+*/
 //CRUD Operations
 //CREATING
 
