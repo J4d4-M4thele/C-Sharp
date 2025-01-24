@@ -7,6 +7,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Ch11Ex02LinqQueries\Ch11Ex02LinqQueries.csproj" />
+  </ItemGroup>
+
 	<ItemGroup>
 		<Using Include="System.Console" Static="true" />
 		<!--<Using Remove="System.Linq" />--> 

@@ -2,11 +2,11 @@
 string[] names = { "Michael", "Pam", "Jim", "Dwight",
 "Angela", "Kevin", "Toby", "Creed" };
 
-//DeferredExecution(names);
+DeferredExecution(names);
 #endregion
 
 #region Targeting a named method
-//FilteringUsingWhere(names);
+FilteringUsingWhere(names);
 #endregion
 
 #region Lambda Expression
@@ -22,7 +22,7 @@ string[] names = { "Michael", "Pam", "Jim", "Dwight",
 #endregion
 
 #region Filtering by type
-//FilteringByType();
+FilteringByType();
 #endregion
 
 #region Working with sets and bags
