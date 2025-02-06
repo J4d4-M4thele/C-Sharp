@@ -1,21 +1,34 @@
+//using Microsoft.AspNetCore.Server.Kestrel.Core; // To use HttpProtocols.
+//using Northwind.EntityModels; // To use AddNorthwindContext method.
+
+#region Configure the web server host and services
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddRazorPages();
+
 var app = builder.Build();
 
-#region Configuring Http pipeline and routes
-//if app is not in development mode
-if(!app.Environment.IsDevelopment())
+#endregion
+
+#region Configure the HTTP pipeline and routes
+
+if (!app.Environment.IsDevelopment())
 {
     app.UseHsts();
 }
 
 app.UseHttpsRedirection();
 
-app.UseDefaultFiles();//will serve .html files
+app.UseDefaultFiles(); // index.html, default.html, and so on.
 app.UseStaticFiles();
 
-app.MapGet("/hello", () => $"Environment is {app.Environment.EnvironmentName}");
-#endregion
-//starts web server, hosts website an waits for requests
-app.Run();//thread-blocking call
+app.MapRazorPages();
+app.MapGet("/hello", () =>
+  $"Environment is {app.Environment.EnvironmentName}");
 
-WriteLine("This executes after web server has stopped!");
+#endregion
+
+// Start the web server, host the website, and wait for requests.
+app.Run(); // This is a thread-blocking call.
+WriteLine("This executes after the web server has stopped!");
