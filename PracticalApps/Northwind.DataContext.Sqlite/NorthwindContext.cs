@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
-using Northwind.EntityModels;
+
+namespace Northwind.EntityModels;
 
 public partial class NorthwindContext : DbContext
 {
@@ -13,7 +14,6 @@ public partial class NorthwindContext : DbContext
         : base(options)
     {
     }
-
 
     public virtual DbSet<Category> Categories { get; set; }
 
@@ -35,15 +35,14 @@ public partial class NorthwindContext : DbContext
 
     public virtual DbSet<Territory> Territories { get; set; }
 
-
-    protected override void OnConfiguring(DbContextOptionsBuilder
-  optionsBuilder)
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         if (!optionsBuilder.IsConfigured)
         {
             string database = "Northwind.db";
             string dir = Environment.CurrentDirectory;
             string path = string.Empty;
+
             if (dir.EndsWith("net8.0"))
             {
                 // In the <project>\bin\<Debug|Release>\net8.0 directory.
@@ -54,19 +53,31 @@ public partial class NorthwindContext : DbContext
                 // In the <project> directory.
                 path = Path.Combine("..", database);
             }
+
             path = Path.GetFullPath(path); // Convert to absolute path.
-            NorthwindContextLogger.WriteLine($"Database path: {path}");
+
+            try
+            {
+                NorthwindContextLogger.WriteLine($"Database path: {path}");
+            }
+            catch (Exception ex)
+            {
+                WriteLine(ex.Message);
+            }
+
             if (!File.Exists(path))
             {
                 throw new FileNotFoundException(
-                message: $"{path} not found.", fileName: path);
+                  message: $"{path} not found.", fileName: path);
             }
+
             optionsBuilder.UseSqlite($"Data Source={path}");
+
             optionsBuilder.LogTo(NorthwindContextLogger.WriteLine,
-            new[] { Microsoft.EntityFrameworkCore.Diagnostics.RelationalEventId.CommandExecuting });
+              new[] { Microsoft.EntityFrameworkCore
+          .Diagnostics.RelationalEventId.CommandExecuting });
         }
     }
-
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -81,10 +92,10 @@ public partial class NorthwindContext : DbContext
             entity.Property(e => e.UnitPrice).HasDefaultValueSql("0");
 
             entity.HasOne(d => d.Order).WithMany(p =>
-          p.OrderDetails).OnDelete(DeleteBehavior.ClientSetNull);
+              p.OrderDetails).OnDelete(DeleteBehavior.ClientSetNull);
 
             entity.HasOne(d => d.Product).WithMany(p =>
-          p.OrderDetails).OnDelete(DeleteBehavior.ClientSetNull);
+              p.OrderDetails).OnDelete(DeleteBehavior.ClientSetNull);
         });
 
         modelBuilder.Entity<Product>(entity =>
@@ -96,12 +107,11 @@ public partial class NorthwindContext : DbContext
             entity.Property(e => e.UnitsOnOrder).HasDefaultValueSql("0");
 
             entity.Property(product => product.UnitPrice)
-          .HasConversion<double>();
+              .HasConversion<double>();
         });
 
         OnModelCreatingPartial(modelBuilder);
     }
 
     partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
-
 }
