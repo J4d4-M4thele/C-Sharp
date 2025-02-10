@@ -1,11 +1,12 @@
 //using Microsoft.AspNetCore.Server.Kestrel.Core; // To use HttpProtocols.
-//using Northwind.EntityModels; // To use AddNorthwindContext method.
+using Northwind.EntityModels; // To use AddNorthwindContext method.
 
 #region Configure the web server host and services
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddRazorPages();
+builder.Services.AddNorthwindContext();
 
 var app = builder.Build();
 
