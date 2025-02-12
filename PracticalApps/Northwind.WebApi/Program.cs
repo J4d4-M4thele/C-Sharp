@@ -4,8 +4,17 @@ using Northwind.EntityModels; // To use AddNorthwindContext method.
 using Microsoft.Extensions.Caching.Memory;
 using Northwind.WebApi.Repositories;
 using Swashbuckle.AspNetCore.SwaggerUI;
+using Microsoft.AspNetCore.HttpLogging;
 
 var builder = WebApplication.CreateBuilder(args);
+
+//http-logging (CH 14)
+builder.Services.AddHttpLogging(options =>
+{
+    options.LoggingFields = HttpLoggingFields.All;
+    options.RequestBodyLogLimit = 4096; // Default is 32k.
+    options.ResponseBodyLogLimit = 4096; // Default is 32k.
+});
 
 //in-memory cache(CH 14)
 builder.Services.AddSingleton<IMemoryCache>(new MemoryCache(new MemoryCacheOptions()));
@@ -44,6 +53,8 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<ICustomerRepository, CustomerRepository>();
 
 var app = builder.Build();
+
+app.UseHttpLogging();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
