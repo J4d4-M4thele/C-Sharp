@@ -4,10 +4,16 @@ using Northwind.EntityModels; // To use AddNorthwindContext method.
 using Microsoft.Extensions.Caching.Memory; // To use IMemoryCache and so on.
 using Swashbuckle.AspNetCore.SwaggerUI; // To use SubmitMethod.
 using Microsoft.AspNetCore.HttpLogging;
-using System.Net.Http.Headers; // To use HttpLoggingFields.
+using System.Net.Http.Headers;
+using Microsoft.EntityFrameworkCore; // To use HttpLoggingFields.
 
 
 var builder = WebApplication.CreateBuilder(args);
+
+//CH 14: configuring database 
+//builder.Services.AddDbContext<NorthwindContext>(options =>
+//    options.UseSqlite(builder.Configuration.GetConnectionString("NorthwindDatabase")));
+builder.Services.AddNorthwindContext();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
