@@ -1,0 +1,17 @@
+@base_address = https://localhost:7193/api/customers/
+
+# getting all customers
+GET {{base_address}}
+
+#getting customers in Germany
+GET {{base_address}}?country=Germany
+
+#getting customers in USA in XML format
+GET {{base_address}}?country=USA
+Accept: application/xml
+
+#getting Alfreds Futterkiste
+GET {{base_address}}ALFKI
+
+#getting a non-existant customer
+GET {{base_address}}abcxy
