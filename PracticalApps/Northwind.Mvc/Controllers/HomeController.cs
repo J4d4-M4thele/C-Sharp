@@ -1,7 +1,8 @@
+using Northwind.EntityModels;
+using Northwind.MinimalApi;
 using Microsoft.AspNetCore.Mvc;
 using Northwind.Mvc.Models;
 using System.Diagnostics;
-using Northwind.EntityModels;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authorization;
 
@@ -25,6 +26,26 @@ namespace Northwind.Mvc.Controllers
 
         public IActionResult Index()
         {
+            try
+            {
+                HttpClient client = _clientFactory.CreateClient(
+                  name: "Northwind.MinimalApi");
+
+                HttpRequestMessage request = new(
+                  method: HttpMethod.Get, requestUri: "todos");
+
+                HttpResponseMessage response = await client.SendAsync(request);
+
+                ViewData["todos"] = await response.Content
+                  .ReadFromJsonAsync<ToDo[]>();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogWarning(
+                  $"The Minimal.WebApi service is not responding. Exception: {ex.Message}");
+
+                ViewData["todos"] = Enumerable.Empty<ToDo>().ToArray();
+            }
             return View();
         }
 
