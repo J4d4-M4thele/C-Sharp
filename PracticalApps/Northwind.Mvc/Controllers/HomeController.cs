@@ -1,5 +1,4 @@
 using Northwind.EntityModels;
-using Northwind.MinimalApi;
 using Microsoft.AspNetCore.Mvc;
 using Northwind.Mvc.Models;
 using System.Diagnostics;
@@ -24,7 +23,7 @@ namespace Northwind.Mvc.Controllers
             _clientFactory = httpClientFactory;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
             try
             {
@@ -37,14 +36,14 @@ namespace Northwind.Mvc.Controllers
                 HttpResponseMessage response = await client.SendAsync(request);
 
                 ViewData["todos"] = await response.Content
-                  .ReadFromJsonAsync<ToDo[]>();
+                  .ReadFromJsonAsync<Todo[]>();
             }
             catch (Exception ex)
             {
                 _logger.LogWarning(
                   $"The Minimal.WebApi service is not responding. Exception: {ex.Message}");
 
-                ViewData["todos"] = Enumerable.Empty<ToDo>().ToArray();
+                ViewData["todos"] = Enumerable.Empty<Todo>().ToArray();
             }
             return View();
         }

@@ -11,11 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Northwind.UnitTests", "Nort
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Northwind.Web", "Northwind.Web\Northwind.Web.csproj", "{129C9D1D-5C38-4DB7-BD8A-76865A0D830A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Northwind.WebApi", "Northwind.WebApi\Northwind.WebApi.csproj", "{FADE06A9-F4C0-42BD-A2E9-F2EC4B8E91B3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Northwind.WebApi", "Northwind.WebApi\Northwind.WebApi.csproj", "{FADE06A9-F4C0-42BD-A2E9-F2EC4B8E91B3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Northwind.Mvc", "Northwind.Mvc\Northwind.Mvc.csproj", "{FFE0B7BB-FA58-4D3E-AC09-C6B805648253}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Northwind.Mvc", "Northwind.Mvc\Northwind.Mvc.csproj", "{FFE0B7BB-FA58-4D3E-AC09-C6B805648253}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Northwind.MinimalApi", "Northwind.MinimalApi\Northwind.MinimalApi.csproj", "{877DF868-9DCE-43CD-82FF-47913B661EFB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Northwind.MinimalApi", "Northwind.MinimalApi\Northwind.MinimalApi.csproj", "{9002CCED-633C-47D7-B4DC-95998ABB3E68}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,10 +47,10 @@ Global
 		{FFE0B7BB-FA58-4D3E-AC09-C6B805648253}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FFE0B7BB-FA58-4D3E-AC09-C6B805648253}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FFE0B7BB-FA58-4D3E-AC09-C6B805648253}.Release|Any CPU.Build.0 = Release|Any CPU
-		{877DF868-9DCE-43CD-82FF-47913B661EFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{877DF868-9DCE-43CD-82FF-47913B661EFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{877DF868-9DCE-43CD-82FF-47913B661EFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{877DF868-9DCE-43CD-82FF-47913B661EFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9002CCED-633C-47D7-B4DC-95998ABB3E68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9002CCED-633C-47D7-B4DC-95998ABB3E68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9002CCED-633C-47D7-B4DC-95998ABB3E68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9002CCED-633C-47D7-B4DC-95998ABB3E68}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

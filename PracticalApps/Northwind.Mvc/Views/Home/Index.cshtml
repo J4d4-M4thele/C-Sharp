@@ -2,12 +2,10 @@
 @{
     ViewData["Title"] = "Home Page";
     string currentItem = "";
-    ToDo[]? todos = ViewData["todos"] as ToDo[];
+    Todo[]? todos = ViewData["todos"] as Todo[];
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p class="alert alert-primary">@DateTime.Now.ToLongTimeString()</p>
     <p>
         <h4>To Dos</h4>
         @if ((todos is null) || (!todos.Any()))
@@ -26,7 +24,7 @@
                 </tr>
             </thead>
             <tbody>
-                    @foreach (ToDo todo in todos)
+                    @foreach (Todo todo in todos)
                     {
                     <tr>
                         <td>@todo.Id</td>

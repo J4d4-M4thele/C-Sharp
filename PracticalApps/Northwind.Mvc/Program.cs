@@ -34,7 +34,7 @@ builder.Services.AddHttpClient(name: "Northwind.WebApi",
 builder.Services.AddHttpClient(name: "Northwind.MinimalApi",
   configureClient: options =>
   {
-      options.BaseAddress = new Uri("http://localhost:7078/");
+      options.BaseAddress = new Uri("http://localhost:5056/");
       options.DefaultRequestHeaders.Accept.Add(
         new MediaTypeWithQualityHeaderValue(
         "application/json", 1.0));
