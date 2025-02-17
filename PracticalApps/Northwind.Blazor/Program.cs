@@ -5,6 +5,9 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorComponents();
 
+//CH15: registering database 
+builder.Services.AddNorthwindContext();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
