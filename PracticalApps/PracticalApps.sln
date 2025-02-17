@@ -19,6 +19,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Northwind.MinimalApi", "Nor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Northwind.Blazor", "Northwind.Blazor\Northwind.Blazor.csproj", "{E03CDC5D-0AC7-49E0-8B76-174F2C495673}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Northwind.Blazor.Services", "Northwind.Blazor.Services\Northwind.Blazor.Services.csproj", "{7419F964-3DDA-419B-8A0E-0516870D1CF5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{E03CDC5D-0AC7-49E0-8B76-174F2C495673}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E03CDC5D-0AC7-49E0-8B76-174F2C495673}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E03CDC5D-0AC7-49E0-8B76-174F2C495673}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7419F964-3DDA-419B-8A0E-0516870D1CF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7419F964-3DDA-419B-8A0E-0516870D1CF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7419F964-3DDA-419B-8A0E-0516870D1CF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7419F964-3DDA-419B-8A0E-0516870D1CF5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
