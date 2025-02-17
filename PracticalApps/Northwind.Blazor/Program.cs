@@ -1,12 +1,14 @@
 using Northwind.Blazor.Components;
+using Northwind.Blazor.Services; // To use INorthwindService.
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddRazorComponents();
-
-//CH15: registering database 
+builder.Services.AddRazorComponents()
+  .AddInteractiveServerComponents();
 builder.Services.AddNorthwindContext();
+builder.Services.AddTransient<INorthwindService,
+  NorthwindServiceServerSide>();
 
 var app = builder.Build();
 
@@ -23,6 +25,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseAntiforgery();
 
-app.MapRazorComponents<App>();
+app.MapRazorComponents<App>()
+  .AddInteractiveServerRenderMode();
 
 app.Run();
